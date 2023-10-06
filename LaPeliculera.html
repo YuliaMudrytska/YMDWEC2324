@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Funciones </title>
+</head>
+
+<body>
+    
+<script>
+    //Ejercicio 1 
+   
+   var nombreCliente = prompt("Cual es su nombre");
+    while(!isNaN(nombreCliente) || nombreCliente==null){
+    alert("Este nombre es incorrecto");
+    nombreCliente = prompt("Por favor, introduzca un nombre valido");
+    
+ }
+
+ 
+    //Ejercicio 2 
+    var edadCliente = parseInt (prompt("Cual es su edad"));
+    while(isNaN(edadCliente) || edadCliente == null){
+    alert("Esta edad es incorrecta");
+   edadCliente = parseInt(prompt("Por favor, introduzca una edad valida"));
+    
+ }
+
+ //Ejercicio 3 
+ const cartelera = ["Spider-Man","Superman","Dragon Ball Super","La era de hiele","18videos"];
+ 
+
+ var peliculaCliente = prompt("Que película quiere ver");
+    while (peliculaCliente.includes(!cartelera) || peliculaCliente == null){
+    alert("ERROR");
+    peliculaCliente = prompt("Por favor, escoja una pelicula");
+    
+ }
+
+    
+
+ 
+
+   
+
+   
+   
+
+
+   
+
+
+</script>
+</body>
+</html>
