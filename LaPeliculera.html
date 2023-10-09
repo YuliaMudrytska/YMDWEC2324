@@ -29,13 +29,35 @@
  //Ejercicio 3 
  const cartelera = ["Spider-Man","Superman","Dragon Ball Super","La era de hiele","18videos"];
  
+    while (true){
+    // Mostrar las películas disponibles
+    console.log("Películas en cartelera:");
+    for (let i = 0; i < cartelera.length; i++) {
+    console.log(`${i + 1}. ${cartelera[i]}`);
+  }
+}
 
- var peliculaCliente = prompt("Que película quiere ver");
-    while (peliculaCliente.includes(!cartelera) || peliculaCliente == null){
-    alert("ERROR");
-    peliculaCliente = prompt("Por favor, escoja una pelicula");
-    
- }
+
+  let seleccion = prompt("Elija una película por su número o nombre:");
+  // Verificar si la selección es un número válido
+  if (!isNaN(seleccion) && seleccion >= 1 && seleccion <= cartelera.length) {
+    const indice = parseInt(seleccion) - 1;
+    console.log(`Ha elegido ver "${cartelera[indice]}"`);
+  } else if (cartelera.includes(seleccion)) {
+    console.log(`Ha elegido ver "${seleccion}"`);
+  } else {
+    alert ("Lo siento, la película seleccionada no está en cartelera. Por favor, elija otra.");
+     // Volver a pedir la elección si es inválida
+  }
+
+
+
+
+
+
+
+
+
 
     
 
