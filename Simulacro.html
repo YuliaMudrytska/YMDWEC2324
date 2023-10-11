@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>SimulacroExamen</title>
+</head>
+<p id ="r"></p>
+<script>
+    /*
+    Realiza un programa que, al darle un numero x de filas te haga el dibujo de un rombo con asteriscos
+    de esta forma:
+        *
+       ***
+      *****
+       ***   
+        *
+    */
+
+    let numFilas= 5;
+    let espacios= '&nbsp';
+    let asterisco='*' ;
+    let salto= '<br/>';
+    let esp= " ";
+    let consta=0;
+    let r= "";
+
+    
+        while(consta<numFilas){        
+            r+=asterisco + espacios + salto;
+            document.getElementById("r").innerHTML = r;
+            consta++;
+            
+    }
+
+    /*
+    opción de resulución:
+    //crecimiento
+    for(var i=0; i<numFilas; i++){
+        var asterisco="";
+        var espacios="";
+
+        for(var k=0 ; k<numFilas - 1-i; k++){
+            espacios+= "&nbsp&nbsp";
+        }
+
+        for (var j= 0; j<= 2*i + 1; j++){
+            asterisco += "*";
+        }
+         r.innerHTML = r.innerHTML + espacio + asterisco + salto;
+    }
+
+    //decreciente
+    */
+    
+
+
+
+
+</script>
+</body>
+</html>
