@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Diferentes tipos de funciones</title>
+</head>
+<body>
+<script>
+   // const frase = Number(prompt("Dame una frase"));
+
+  let resultado = multiplicar(3,2);
+    function multiplicar(a,b){
+        return a*b;
+
+    }
+    console.log(resultado);
+
+    let result= function hola(){
+        console.log("Bienvenido");
+    }
+    result(); //podemos invocar la función tanto poniendo solo la variable con parentesis
+    console.log(result());//como poniendo console.log(result ()); 
+
+    let product = function (a,b){return a+b}
+    let res= product(4,12)
+    console.log(res);
+    //esta función no hace falta ni declararla ni invocarla en si
+
+    const funcion2 = function(){
+        console.log("La función 2 ha sido ejecutada");
+    } //función autoinvocada
+    const funcion1 =function (callback){
+        callback();
+    }
+    funcion1(funcion2);
+
+  (function (user){
+    console.log("Hola " + "user");
+  })("pepe");
+ // (function () { alert ("¡Hola!");}());
+
+
+  //recursividad 
+  function factorial(n){
+    if (n<= 1){
+        return 1;
+    }else{
+        return n*factorial(n-1)
+    }
+  }
+  console.log(factorial(5));
+
+ let miArray=[12, 13, 112, 143, 97];
+  miArray.forEach(function (contenido, posicion) {
+  console.log (`Posición ${ posicion }: ${ contenido }`)
+  });
+
+  const miSet= new Set("pamplina");
+  console.log(miSet);
+
+  let conj = new Set([2,3,4,5,3,2,7]);
+  for(let elem of conj){
+    console.log(elem);
+  }
+
+  //add, delete, clear, siz, has
+
+  const miArr=[...miSet];
+
+  //miArry=[1,1,1,3,7,4,3,5];
+  let miSet2 = new Set([1,1,1,3,7,4,3,5]);
+  let miArrayFinal =[...miSet2];
+  console.log(miSet2);
+
+ const miA1 = [1,2,3,4,5,6,7,8];
+ const miA2 = [1,2,3,8,9,0,43,45,65];
+ const miA3 = [17,32,87,45];
+
+  const c1 = new Set ([...miA1, ...miA2, ...miA3]);
+  const cSinDupli = [...c1];
+  console.log(cSinDupli);
+  console.log(cSinDupli instanceof Array);
+
+  //Maps
+  const frutas = new Map([["apples", 500], ["bananas", 300], ["oranges", 200]]);
+  console.log(frutas);
+
+  //mejor se crean vacios y se usa el set
+
+  const fruti =new Map();
+  fruti.set("manzana" ,500);
+  fruti.set("platano" ,300);
+  fruti.set("naranjas" ,200);
+
+  console.log(fruti);
+
+</script>
+</body>
+</html>
