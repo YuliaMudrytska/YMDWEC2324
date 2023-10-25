@@ -7,13 +7,14 @@
 
 	<body>
 		<script>
+            
             const cadena = prompt ("Dame la cadena");
             cadena.toUpperCase();
 
             var v1 = cadena.includes("00");
-            var v1 = cadena.includes("101");
-            var v1 = cadena.includes("ABC");
-            var v1 = cadena.includes("H0");
+            var v2 = cadena.includes("101");
+            var v3 = cadena.includes("ABC");
+            var v4 = cadena.includes("H0");
 
             var cont1 = 0;
             var cont2 = 0;
@@ -23,10 +24,23 @@
         //usar foreach /slice 
 
             function numeroPatrones(){
-             if (cadena  )
-
-            contador ++;
+             if (cadena === v1){
+                cont1++;
+             }
+             else if (cadena === v2){
+                cont2++;
+             }
+             else if(cadena === v3){
+                cont3++;
+             }
+             else if (cadena === v4){
+                cont4++
+             }
             }
+
+            numeroPatrones();
+
+
            const patrones = ["00", "101", "ABC", "H0"];
            /*console.log("El patrón " + patrones[0] + " aparece " + contador + " veces");
            console.log("El patrón " + patrones[1] + " aparece " + contador + " veces");
@@ -34,8 +48,10 @@
            console.log("El patrón " + patrones[3] + " aparece " + contador + " veces");*/
            //hacer con un alert
 
-           alert("El patrón " + patrones[0] + " acapece " + cont1 + " veces "
-           + "el patrón " + patrones[1]);
+           alert("El patrón: " + patrones[0] + " acapece: " + cont1 + " veces"+
+           "\nel patrón: " + patrones[1]+ " aparece: " + cont2 + " veces"+
+           "\nel patrón: " + patrones[2]+ " aparece: " + cont3 + " veces" +
+           "\nel patrón: " + patrones[3]+ " aparece: " + cont4 + " veces");
 
 
 
