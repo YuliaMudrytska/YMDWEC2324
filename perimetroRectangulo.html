@@ -6,17 +6,21 @@
     </head>
     <body>
         <script>
-            var num1 = prompt("Dame la base");
-            var num2 = prompt("Dame la altura");
+            var num1 = Number(prompt("Dame la base"));
+            var num2 = Number(prompt("Dame la altura"));
 
             function perimetroRectangulo(){
                 if(num1 === num2){
                     alert("Los parametros son incorrectos");
                 }
                 else{
-                    return 2*(num1+num2);
+                    result1 = num1+num2;
+                    result2 =result1 *2;
+                    alert(num1 + "+" + num2 + "=" + result1);
+                    alert("2*(" + num1 + "+" + num2 + ")" + "=" + result2);
                 }
             }
+            perimetroRectangulo();
 
         </script>
     </body>
