@@ -9,6 +9,7 @@
     }
     var ana = new Persona("Ana", "  Hoyo", "23");
     var paco = new Persona("Paco", "Martinez","27");
+    alert(ana.nombre);
 
     ana.nacionalidad = "Inglesa";
 
@@ -17,4 +18,26 @@
 
     Persona.prototype.fecha = new Date().toLocaleString();
     alert(paco.fecha);
+
+    //Prototipos permiten que los objetos de JS hereden entre sí
+    //Añadir la palabra prototype para añadir una propiedad a todo el objeto
+
+    Persona.prototype.boda = "2003";
+    Persona.prototype.nupcias = function(){
+       console.log ("La boda fue el año" + this.boda);
+    }
+
+    alert(ana.nupcias()); //no es así devuelve la funcion no el resultado
+    alert(paco.nombreCompleto());//se tiene que poner los ()
+
+    //JSON
+
+    
+
+
+
+
+
+
+
 </script>
