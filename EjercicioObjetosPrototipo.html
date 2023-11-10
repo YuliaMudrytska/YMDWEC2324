@@ -1,63 +1,52 @@
-<script>
-    //Act 3.2
-    function Televisor(nombre,categiria,unidades,precio){
-        this.nombre = nombre;
-        this.categiria = categiria;
-        this.unidades = unidades;
-        this.precio = precio;
-        this.importe = function(){
-           return this.unidades * this.precio;
-        }
-    }
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+         //Act 3.2
+            function TV(nombre,categiria,unidades,precio){
+                this.nombre = nombre;
+                this.categiria = categiria;
+                this.unidades = unidades;
+                this.precio = precio;
+                this.importe = function(){return this.unidades * this.precio};
+            }
 
-        var tvSamsumg = new Televisor("TV Samsung 42" , "Televisores" , "4" , "345.95");
+            var tvSamsumg = new TV("TV Samsung 42" , "Televisores" , "4" , "345.95");
 
-        
-        //Act 3.1
-        function Producto(nombre,categiria,unidades,precio){
-        this.nombre = nombre;
-        this.categiria = categiria;
-        this.unidades = unidades;
-        this.precio = precio;
-        this.importe = function(){
-           return this.unidades * this.precio;
-        }
-    }
+            //Act 3.1
+            function Producto(nombre,categiria,unidades,precio){
+                this.nombre = nombre;
+                this.categiria = categiria;
+                this.unidades = unidades;
+                this.precio = precio;
+                this.importe = function(){return this.unidades * this.precio};            
+            }
+            
 
-        Producto.prototype.getInfo = function(){
-            return this.nombre + "(" + this.categiria +"): " + this.unidades + " x " + this.precio + "€ = " + this.importe() + "€"; 
-        }
-        
-        var prod1 = new Producto("TV Samsung + 65" , "televisor" , "5" , "654.33");
-      //  alert(prod1.getInfo());
+            Producto.prototype.getInfo = function(){
+                return this.nombre + "(" + this.categiria +"): " + this.unidades + " x " + this.precio + "€ = " + this.importe() + "€"
+            }
+            
+            const arrayProductos =[
+                prod1 = new Producto("TV Samsung + 65" , "televisor" , "5" , "654.33"),
+                prod2 = new Producto("Samsung Galaxy A6" , "Movil" , "20" , "300.40"),
+                prod3 = new Producto("HP pro", "portatil" , "10" , "699.99")   
+            ];
+            Producto.prototype.fun1 = function(){return document.getElementById("demo").innerHTML = arrayProductos.toString()};
+            
+            
+            //Act 3.3
+            function Televisores(nombre,categiria,unidades,precio,tam){
+                Producto.call(this,nombre,categiria,unidades,precio);
+                this.tamaño = tam;
+            }
 
-        var prod2 = new Producto("Samsung Galaxy A6" , "Movil" , "20" , "300.40");
-        //alert(prod2.getInfo());
+            Televisores.prototype = Object.create(Producto.prototype);
 
-        var prod3 = new Producto("HP pro", "portatil" , "10" , "699.99");
-        //alert(prod3.getInfo());
-
-        function tSt(){
-            //función toString
-
-        }
-
-        function tVal(){
-            //función toValue
-
-        }
-
-        //Act 3.3
-        function Televisores(nombre,categiria,unidades,precio,tam){
-            Producto.call(this,nombre,categiria,unidades,precio);
-            this.tamaño = tam;
-        }
-
-        Televisores.prototype = Object.create(Producto.prototype);
-
-        Televisores.prototype.getInf = function(){
-            return this.nombre + " " + this.tamaño + "(" + this.categiria +"): " + this.unidades + " x " + this.precio + "€ = " + this.importe() + "€"; 
-        }
+            Televisores.prototype.getInf = function(){
+                return this.nombre + " " + this.tamaño + "(" + this.categiria +"): " + this.unidades + " x " + this.precio + "€ = " + this.importe() + "€"; 
+            }
 
         var tel1 = new Televisores("TV LG", "televisor" , "8" , "300.77" , "6");
         alert(tel1.getInf());
@@ -90,7 +79,7 @@
         ];
 
         function prodOrdenadoPorNombre(arr){
-            return Array.sort;
+            return ;
 
         }
 
