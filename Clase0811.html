@@ -1,5 +1,5 @@
 <script>
-    function Persona(nom, ape, ed){
+  /*  function Persona(nom, ape, ed){
         this.nombre = nom;
         this.apellido = ape;
         this.edad = ed;
@@ -29,6 +29,103 @@
 
     alert(ana.nupcias()); //no es así devuelve la funcion no el resultado
     alert(paco.nombreCompleto());//se tiene que poner los ()
+
+    //propiedades y metodos de encapsulamiento 
+   /* var animal ={
+        tipo: invrtebrado,
+        verTipo: function(){
+            console.log(this.tipo);
+        }
+    }
+
+    var animal = Object.create(Animal);*/
+
+    
+    //call para invocar un metodp pasando un objt propietario como argumento,
+    //es decir, indocando a que objeto se referirá la palabra clave call
+
+    const persona1 = {nombre: 'Paco' , apellido: 'Perez', nombreCompleto: function(){return this.nombre + " " + this.apellido}};
+    const persona2 = {nombre: 'Belen' , apellido: 'Loprin'};
+    console.log(persona1.nombreCompleto.call(persona2));
+
+    //aquí this se refiere a persona2. Si la función tuviera argumentos, se le podría pasar en el call : por ejemplo : call(persona2)
+
+    //apply
+
+    //para invocar un objeto pasando un objeto propietario como argumento, es decir, 
+
+    const persona = {nombre: 'Pedro' , apellido: 'Gimenez' , nombreCompleto: function(){return }};
+    const pe2 = {nombre: 'Isa' , apellido: 'JJ'};
+  //  console.log(persona1.nombreCompleto.bind(pe2));
+
+    //creamos un objeto 
+    const user ={
+        name: 'Otto',
+        role: 'arquero',
+        life: 99,
+        features: ["lern", "code", "paint"]
+    }
+    //como se desestructura:
+    const {name,...rest} = user;
+
+  // console.log(user);
+
+   // console.log(user.features);
+
+    //herencia:
+    const fullUser2 = {
+        ...user,
+        power: 25,
+        life: 50       
+    }
+
+    const fullUser = {
+        ...structuredClone(user),
+        power: 25,
+        life: 50       
+    }
+
+  //  console.log(fullUser.features);
+    //se crea un objeto y se sobreescribe el argumento life, el orden influye, y power se añade sin mas
+    
+    fullUser.features[0] = "program";
+
+   // console.log(fullUser.features); //no machaca el lern, lo mantiene : user:['lern' , 'code' , 'paint'] ; fullUser: ['programar', 'code' , ]
+   // console.log(user.features);
+
+    /*
+    metodos:
+    object.keys(obj);
+    //Devuelve Array de los indices del iterable (en una cadena---número de letras)
+
+    object.values(obj);
+    //devuelve Array  de los contenidos del iterable
+
+    object.entires
+    //devuelve Array de los pares claves: valor
+    */
+
+    const arr = ["perro" , "gato" , "pajaro" , "hamster"];
+    console.log(Object.keys(arr));
+    console.log(Object.values(arr));
+    console.log(Object.entries(arr));
+  //  console.log(Object.fromEntries(entries));
+
+  const keys = ["name" , "life" , "power" , "talk"];
+  const values = ["Otto" , 99 , 10 , function(){return "Hola"}];
+
+  //se crea un array pares
+  const entries = [];
+
+   for (let i of Object.keys(keys)){
+    const key = keys[i];
+    const value = values[i];
+    entries.push([key, value]);
+   }
+   //se usa ob.fromEnties
+   const user2 = Object.fromEntries(entries);
+   console.log(user2);
+
 
     //JSON
 
