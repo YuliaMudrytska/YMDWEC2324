@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Clase del 22/11</title>
+</head>
+<body>
+    <p id="vna"></p>
+<script>
+    /*
+    Abrir una nueva ventana de dimensiones 500x200px en la posición (100,200)
+    Escribir en ella (con document.write) un título h1 que diga 'Hola'
+    Desplazarla 300px hacia abajo y 100 a la izquierda
+    Cerrarla
+    */
+
+    window.name= "mi ventana";
+    let texto="";
+
+    //document.getElementById("vna").innerHTML = 'Hola';
+
+    miVentana= window.open("100" , "200" , "width=500, height=200");
+
+    miVentana.document.write("<h1>Hola</h1>");
+
+    function moverAbajo(){
+        miVentana.moveBy(0,300);
+    }
+
+    function moverIzquierda(){
+        miVentana.moveBy(100,0);
+    }
+
+
+    
+</script>
+<button onclick="moverAbajo()">moverAbajo</button>
+<button onclick="moverIzquierda()">moverIzquierda</button>
+
+
+
+</body>
+</html>
