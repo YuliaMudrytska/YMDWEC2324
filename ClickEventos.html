@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta>
+        <title>Ejemplo de pulsar</title>
+    </head>
+    <body>
+        <input type="button" value="pulsa">
+        
+        <script>
+            
+            document.getElementById("pulsa").addEventListener("on", manejador);
+            document.getElementById("pulsa").addEventListener("mouseout", manejador);
+
+            document.getElementById("parrafo1").addEventListener("click", saludo);
+            document.getElementById("parrafo2").addEventListener("click", saludo);
+
+            function manejador(e){
+                switch(e.type){
+                    case "mouseover": 
+                        this.style.color ="red";
+                        break;
+                    case "mouseout" : 
+                        this.style.color ="blue";
+                        break;
+                    
+                }//switch
+            }//manejador
+
+           
+
+            function saludo(e){
+                if(e.target.id=="parrafo1") alert ("has pulsado  parrafo 1");
+
+                else if(e.target.id="parrafo2") alert("has pulsado el parrado 2");
+
+                //alert("Has pulsado "+e.target.id);
+            }
+
+
+
+
+        </script>
+    </body>
+</html>
