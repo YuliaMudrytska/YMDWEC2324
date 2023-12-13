@@ -34,15 +34,18 @@
                 //apartado 1
                 const mayores = usuarios.filter(usuario => usuario.edad >= 18);
                 const result = mayores.map(usuario => usuario.nombre + " " + usuario.edad);
-                //alert ("Usuarios mayores de edad : \n" +  result);
+                console.log ("Usuarios mayores de edad : \n" +  result);
 
             //apartado 2
 
             //apartado 3
-            const menor = usuarios.reduce((min,usuario)=> usuario.edad > min ? usuario.edad : min,0 );
-            alert("La edad más pequeña es : " + menor);
+            const menor = usuarios.reduce((min,usuario)=>  usuario.edad > min ? min : usuario.edad);
             console.log("La edad más pequeña es : " + menor);
-
+            
+            //apartado 4
+            const nombres = usuarios.filter(usuario => usuario.nombre.startsWith('A'));
+            const res = nombres.map(usuario => usuario.nombre);
+            console.log("Usuarios co primra A : \n" + res);
 
 
 
