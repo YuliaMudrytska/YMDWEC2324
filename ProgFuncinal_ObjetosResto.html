@@ -22,7 +22,7 @@
                 alert( "Edad original : " + edad + "\nEdades duplicadas : " + duplic);
 
                 //Obtener la suma total de las edades duplicadas.
-                const sumaEdades = usuarios.reduce((total,usuario) => total += usuario.edad);
+                const sumaEdades = usuarios.reduce((total,usuario) => total + usuario.edad, 0 );
                 //const res = sumEdades.map(usuario.edad)
                 
                 alert("La suma de las edades es : " + sumaEdades);
