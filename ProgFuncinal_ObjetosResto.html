@@ -8,7 +8,6 @@
         <script>
             /*
             Duplicar la edad de esos usuarios filtrados.
-            Obtener la suma total de las edades duplicadas.
             */
 
             const usuarios = [
@@ -20,8 +19,16 @@
                 const duplic = usuarios.map(usuario => usuario.edad * 2);
                 const edad = usuarios.map(usuario => usuario.edad);
                 
-                alert( "Edad original : " + usuarios.e + "Edades duplicadas : " + duplic);
-                //const resul = duplic.map(usuario=> usuario.)
+                alert( "Edad original : " + edad + "\nEdades duplicadas : " + duplic);
+
+                //Obtener la suma total de las edades duplicadas.
+                const sumaEdades = usuarios.reduce((total,usuario) => total += usuario.edad);
+                //const res = sumEdades.map(usuario.edad)
+                
+                alert("La suma de las edades es : " + sumaEdades);
+
+
+                
         </script>
     </body>
 </html>
