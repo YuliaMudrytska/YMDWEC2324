@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta>
+        <title>Ejercico de objetos pt1</title>
+    </head>
+    <body>
+        <script>
+            /*
+            Enunciado del problema:
+            Se tiene una lista de usuarios con la siguiente estructura:
+            const usuarios = [
+            { id: 1, nombre: 'Juan', edad: 25 },
+            { id: 2, nombre: 'María', edad: 30 },
+            { id: 3, nombre: 'Pedro', edad: 20 },
+            { id: 4, nombre: 'Ana', edad: 35 },];
+            Se requiere:
+            Filtrar los usuarios mayores de 25 años.
+            */
+            
+            const usuarios = [
+            { id: 1, nombre: 'Juan', edad: 25 },
+            { id: 2, nombre: 'María', edad: 30 },
+            { id: 3, nombre: 'Pedro', edad: 20 },
+            { id: 4, nombre: 'Ana', edad: 35 },];
+
+            const mayores = usuarios.filter(usuario => usuario.edad > 25);
+            const mayor = mayores.map(usuario => usuario.nombre+ " " + usuario.edad);
+            alert("Usuarios seleccionados : " + mayor);
+
+
+
+        </script>
+    </body>
+</html>

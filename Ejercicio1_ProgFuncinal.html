@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta>
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <script>
+            /*
+            Dada la lista de números:
+            const numeros = [1, 2, 3, 4, 5];
+            Usar map, filter y reduce para obtener los números duplicados, 
+            obtener los pares y la suma de todos.
+            */
+
+            const numeros=[1,2,3,4,5];
+
+            const duplicados = numeros.map(numero => numero * 2);
+
+            alert("Numeros duplicados : " + duplicados);
+
+            const pares = numeros.filter(numero => numero % 2 === 0);
+            alert("Numeros pares : " + pares);
+
+            const sumar = numeros.reduce((cont, numero) => cont + numero, 0 );
+            alert("La suma total de los numeros es : " + sumar);
+
+        </script>
+    </body>
+</html>
