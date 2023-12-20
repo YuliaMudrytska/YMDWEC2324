@@ -1,0 +1,3 @@
+//5.- Generar una cadena alfanumérica aleatoria
+const cadenaAleatoria=()=>Math.random().toString(36).slice(2);
+
