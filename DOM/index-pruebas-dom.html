@@ -50,8 +50,26 @@
   </form>
 </body>
 <script>
+    console.log("El elemento con id ‘input2’");
     console.log(document.getElementById("input2"));
-    console.log
+
+    console.log("La colección de párrafos")
+    console.log(document.getElementsByTagName("p"));
+
+    console.log("Lo mismo pero sólo de los párrafos que hay dentro del div ‘lipsum");
+    console.log(document.getElementById("lipsum").getElementsByTagName("p"));
+
+    console.log("El formulario (ojo, no la colección con el formulario sino sólo el formulario)")
+    console.log(document.getElementsByTagName("label"));
+
+    console.log("Todos los inputs");
+    console.log(document.getElementsByTagName("input"));
+
+    console.log("Sólo los inputs con nombre ‘sexo’");
+    console.log(document.getElementsByName("sexo"));
+
+    console.log("Los items de lista de la clase ‘important’ (sólo los LI)");
+    console.log(document.getElementsByClassName("important"));//corregir
 
 </script>
 </html>
