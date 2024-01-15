@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Formularios</title>
+
+    
+</head>
+
+<body>
+    <form>
+        <label >Nombre: </label>
+        <input type="text" name="nombre"><br><br>
+
+        <lable>Apellidos: </lable>
+        <input type="text" name="apellidos"><br><br>
+
+        <label>DNI: </label>
+        <input type="text" name="DNI"><br><br>
+
+        <label>Sexo: </label><br>
+        <input type="radio" value="Hombre" name="sexo" checked="checked">Hombre<br>
+        <input type="radio"  value="Mujer" name="sexo">Mujer<br><br>
+
+        <label>Foto: </label><br>
+        <input type="file" name="foto"><br><br>
+
+        <input type="checkbox" value="publi" checked="Enviar publicidad">Enviar publicidad<br>
+
+        <input type="submit" value="Guardar cambios">
+        <input type="submit" value="Borrar los datos introducidos"><br><br>
+
+        <select id="aprobar" >
+            <option value="10">Saco 10 en DWEC</option>
+            <option value="9">Saco 9 en DWEC</option>
+            <option value="8">Saco 8 en DWEC</option>
+            <option value="crear">Añadir</option>
+            </select>
+    </form>
+    <script>
+        /*
+        Un array form con referencia a todos los furmularios de la misma, al que se accede mediante document.forms
+
+        Un array element con todos los elementos que contiene(botones, listas, cudro de texto): document.form[0].
+        */
+
+        var elemento=document.getElementById("aprobar");
+		for(i=0;i<elemento.options.length;i++){
+		//alert("Valor de la opcion " + elemento.options[i].value);
+		}
+            var sel=elemento.selectedIndex;
+            //alert("El valor de la opcion seleccionada es " + elemento.options[sel].value + "y el texto asociado es" +elemento.options[sel].text);
+	       // Para cambiar  el índice seleccionado:
+        elemento.selectedIndex=0;
+
+        const element = document.getElementById("aprobar")
+        var nuevaSeleccion = documet.createElement("crear");
+        var intro = prompt("Añade la nota");
+        intro.apperChild(aprobar)
+        crear.apperChild(element);
+        
+    </script> 
+
+</body>
+
+
+</html>
