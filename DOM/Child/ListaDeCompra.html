@@ -14,19 +14,30 @@
         }
 
         function Añadir(){
-            var parrafo = document.createElement("p");
+            var parrafo = document.createElement("li");
             var texto = document.createTextNode(document.getElementById("texto").value);
             parrafo.appendChild(texto);
+
+        var cont = document.getElementById("lista");
+        cont.appendChild(parrafo);
+
+        const orden = [];
+         orden.push(texto);
+         orden.sort();
+
+        
         }//crearparrafo
 
     </script> 
 </head>
 
 <body>
+    <h1>Lista de compra</h1>
     <div id="lista"></div>
     <br/>
     <textarea id="texto"></textarea>
     <br/>
+   
     <button id="añadir">Añadir</button>
     
 </body>
