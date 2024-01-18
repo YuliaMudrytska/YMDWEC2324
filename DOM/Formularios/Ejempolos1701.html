@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta>
+        <title>Formulario</title>
+    </head>
+    <body>
+
+        <form action="mailto:ymudrytska@gmail.com" method="post">
+            Nobre: 
+            <input type="text" id="Nombre" size="20"><br><br>
+            Apellidos:
+            <input type="text" id="Apellidos" size="20" ><br><br>
+            DNI:
+            <input type="text" id="DNI" size="10"><br><br>
+            Sexo: <br>
+            <input type="radio" value="sexo">Mujer<br>
+            <input type="radio" value="sexo">Hombre<br><br>
+            Incluir foto:
+            <input type="file" name="img"><br><br>
+            <input type="checkbox" value="publi" checked="Enviar publicidad"> Enviar publicidad<br><br>
+            <input type="submit" value="Guardar cambios" id="btn_ok" name="enviar">
+            <input type="reset" value="Borrar los datos introducidos" name="cancel">
+        </form>
+
+        <script>
+
+            document.querySelector('form').addEventListener('submit', function(evento){
+                evento.preventDefault();
+                if(confirm("¿Quieres continuar?")) this.submit();
+            });
+
+            document.querySelector('form').addEventListener('rest', function(evento){
+                document.querySelector('input').focus();
+            })
+            
+
+        </script>
+    </body>
+</html>
