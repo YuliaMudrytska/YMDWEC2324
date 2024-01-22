@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var formilario = document.getElementById("miFormulario");
+            var formulario2 = document.form["miFormulario"];
+
+            var formulario3 = document.getElementsByTagName("forms")[1];
+            var formulario4 = document.forms[0];
+
+            windows.onload = iniciar;
+
+            function iniciar(){
+                document.getElementById("enviar").addEventListener('click',validar,false);//por defecto se pone en false así que no haría falta ponerlo
+            }
+
+            function validarNombre(){
+                var elemento = document.getElementById("nombre");
+                if(elemento.value==" "){
+                    alert("El nombre no puede dejarse vacío");
+                    return false;
+                }
+                return true;
+            }//validarNombre
+
+            function validarTelefono(){
+                var tel = document.getElementById("telefono");
+                if(isNaN(tel.value)){
+                    alert("El campo tiene que ser numérico");
+                    return false;
+                }
+                return true;
+            }//validarTelefono
+
+            function validar(){
+                if(validarNombre() && validarTelefono() && confirm("Estoy seguro que quiero enviar el formulario")){
+                    return true;
+                }//if
+                else{e.preventDefault();
+                    return false;
+                }//else
+            }//validar
+        </script>
+        <h1>Formulario</h1>
+        <form action="enviar.php" method="post" id="miFormulario">
+            <table>
+                <tr>
+                    <td>Nombre: </td>
+                    <td>
+                        <input type="text" name="nombre" id="nombre"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Telefono: </td>
+                    <td>
+                        <input type="text" name="telefono" id="telefono"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fecha de nacimiento: </td>
+                    <td>
+                        <input type="text" name="dia" size="2" id="dia">
+                        <input type="text" name="mes" size="2" id="mes">
+                        <input type="text" name="anio" size="4" id="anio">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sexo: </td> 
+                    <td>
+                        <input type="radio" name="sexo" value="H" id="sexo">Hombre
+                        <input type="radio" name="sexo" value="M" id="sexo">Mujer
+                        <input type="radio" name="sexo" value="X" id="sexo">Otro
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </body>
+</html>
