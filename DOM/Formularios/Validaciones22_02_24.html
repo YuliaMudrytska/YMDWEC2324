@@ -37,6 +37,25 @@
                 return true;
             }//validarTelefono
 
+            function validarFecha(){
+                var dia = document.getElementById("dia").value;
+                var mes = document.getElementById("mes").value;
+                var anio = document.getElementById("anio").value;
+                var fecha = new Date(anio,mes,dia);
+
+                if(isNaN(fecha)){
+                    alert("Los campos de fecha son incorrectos");
+                    return false;
+                }
+                return true;
+
+            }//validarFecha
+
+            function validarCheck(){
+                var campoCkeck = document.getElementById("mayor").value;
+                
+            }
+
             function validar(){
                 if(validarNombre() && validarTelefono() && confirm("Estoy seguro que quiero enviar el formulario")){
                     return true;
@@ -64,9 +83,9 @@
                 <tr>
                     <td>Fecha de nacimiento: </td>
                     <td>
-                        <input type="text" name="dia" size="2" id="dia">
-                        <input type="text" name="mes" size="2" id="mes">
-                        <input type="text" name="anio" size="4" id="anio">
+                        <input type="text" name="dia" size="2" id="dia" maxlength="2">
+                        <input type="text" name="mes" size="2" id="mes" maxlength="2">
+                        <input type="text" name="anio" size="4" id="anio" maxlength="4">
                     </td>
                 </tr>
                 <tr>
@@ -75,6 +94,20 @@
                         <input type="radio" name="sexo" value="H" id="sexo">Hombre
                         <input type="radio" name="sexo" value="M" id="sexo">Mujer
                         <input type="radio" name="sexo" value="X" id="sexo">Otro
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mayor de 18: </td>
+                    <td>
+                        <input type="checkbox" name="mayor" id="mayor">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button name="Enviar" id="enviar">Enviar</button>
+                    </td>
+                    <td>
+                        <button name="Borrar" id="borrar">Borrar</button>
                     </td>
                 </tr>
 
