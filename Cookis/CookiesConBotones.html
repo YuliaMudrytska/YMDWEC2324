@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eje cookis</title>
+    
+
+</head>
+
+<body>
+    <button type="button" id="verTodas">Ver Todas las cookies</button>
+    <button type="button" id="crearCookie1">Crear cookie 1</button>
+    <button type="button" id="crearCookie2">Crear cookie 2</button>
+    <button type="button" id="borraCookie1">Borrar cookie 1</button>
+    <button type="button" id="borrarCookie2">Borrar cookie 2</button>
+    
+
+    
+    <script>
+        document.getElementById("verTodas").addEventListener("click", verTodas);
+        document.getElementById("crearCookie1").addEventListener("click", crearCookie);
+        document.getElementById("crearCookie2").addEventListener("click", crearCookie);
+        document.getElementById("borraCookie1").addEventListener("click", borrarCookie);
+        document.getElementById("borrarCookie2").addEventListener("click", borrarCookie);
+
+        function verTodas(){
+            alert(document.cookie)
+        }
+
+        function crearCookie(e){
+            if(e.target.id=="crearCookie1"){
+                document.cookie="nombre=Juan";
+            }
+            else if(e.target.id=="crearCookie2"){
+
+                document.cookie="apellido=Garcia"
+            }
+
+        }
+
+        function borrarCookie(e){
+            if(e.target.id=="borraCookie1"){
+                document.cookie="nombre=; expires= Fr, 26 Jan 2024 13:00:01 UTC";
+            }
+            else if(e.target.id="borrarCookie2"){
+                document.cookie="apellido=; expires= Fr, 26 Jan 2024 13:00:01 UTC";
+            }
+
+
+        }
+
+        /*
+        API:
+
+        sessionStorage : 
+        localStorage: 
+        Sirven para guardar los juegos en un punto concreto
+
+        Metodos:
+        setItem : permite crear un elemento de al,macenamiento web
+        getItem : permite consultar un elemento
+        removeItem : permite eliminar info de un elemento
+        clear: permite eliminar el elemento completo
+
+        son siempre cadenas :
+
+        localStorage.setItem("nombre", "Juan Jose")//el metodo que vamos a usar y el mejor
+
+        se podrá : 
+        localStorage.appellido = "Garcia"
+        //peor por que si hay cambios en los navegadores podría fallar
+
+        BUSCAMINAS:
+        Comprobar si el navegador sopiorta Storage
+        */
+
+    </script>
+</body>
+
+</html>
