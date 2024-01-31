@@ -2,11 +2,9 @@
 <html>
 
 <head>
+    <meta>
     <title>Eje cookis</title>
-    
-
 </head>
-
 <body>
     <button type="button" id="incrementar">Incrementar</button>
     <button type="button" id="decrementar">Decrementar</button>
@@ -14,7 +12,6 @@
     <p d="saludo"></p>
     <p d="contador"></p>
 </body>
-
     <script>
         if(typeof(Storage)!== "undefined"){
 
@@ -55,14 +52,5 @@
             localStorage.removeItem("usuario");
             document.getElementById("saludo").innerHTML="";
         }
-
-
-
-
-        
-
-
     </script>
-
-
 </html>

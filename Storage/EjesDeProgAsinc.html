@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta>
+    <title>Contador</title>
+</head>
+<body>
+    <h1>API Programación Asíncrona</h1>
+    <button  id="pulsar" name="pulsar">pulsar</button>
+
+    <div id="mensajes"></div>
+
+    
+</body>
+    <script>
+        window.addEventListener("load", inicio);
+
+        let contador= 0;
+        let mensaje = document.getElementById("mensajes");
+
+        function inicio(){
+            document.getElementById("pulsar").addEventListener("click", probarPromise);
+        }//inicio
+
+
+        function probarPromise(){
+            let esteContador =++contador;
+            let mensaje = document.getElementById('h2')
+            setTimeout(() => h2.insertAdjacentHTML('beforeend' , esteContador + ") Empieza el código síncrono </br>"));
+            let miPromesa = new Promise
+            
+        }
+
+            /*
+            Página web con div para mensajes y botón que genere una promesa que invoque
+            una función llamada probaPromise
+
+            La duncón probarPromise debe:
+            Contar las veces que se ha pulsado el botón y sacar en el div los siguientes 
+            cuatro mensajes:
+
+            1) antes de construir la promesa: "cont)empieza el código síncrono
+            2) dentro de la promesa antes de resolverla, "cont)Dentro de la promesa, antes del timeout. Empieza el código asíncrono
+            3) Dentro del then "cont)Dentro del then. Código asíncrono terminado
+            4) Fuera de la promesa
+
+            para la promesa utilizar:
+                setTimeOut(function(){
+                    resolve(esteContador);}, Math.random()*4000 + 1000);
+
+            let resultado = await miPromesa;//pausado
+            console.log(resultado)//si no ponemos el async no funciona
+
+            
+            async function asyawt(){
+                try{
+                const misDatos = await getDatosProm()
+                console.log(misDatos)
+                }catch(err){
+                    console.log(err)
+                }
+            }
+            asyawt();
+
+            */
+
+    </script>
+</html>
