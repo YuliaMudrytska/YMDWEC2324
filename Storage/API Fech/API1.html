@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenidoAPI"></div>
+    <script>
+        async function fetchDatos(){
+            try{
+            const response= await fetch("https://randomuser.me/api/?results=10")
+            const datos= await response.json()
+            console.log(datos.results.length)
+
+            document.getElementById("contenidoAPI").innerHTML= 
+            `<img src= "${datos.results[0].picture.large}"/>
+            <p>Nombre: ${datos.results[0].name.first}</p>`
+            }
+            catch(err){
+                console.log("Error recibido: " + err)
+            }
+        }
+        
+        fetchDatos();
+    </script>
+</body>
+</html>
