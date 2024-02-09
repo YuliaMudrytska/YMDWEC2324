@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases POO</title>
+</head>
+<body>
+    <div id="mensaje">
+
+    </div>
+    <script>
+        window.addEventListener("load", function(){
+        class coche{
+            constructor(marca){
+                this._marca = marca;
+            }
+            anuncio(){
+                return "Ha llegado el nuevo coche de " + this._marca;
+            }
+        }//class coche
+
+            class Modelo extends coche{
+                constructor(marca, modelo){
+                    super(marca);
+                    this.modelo = modelo;
+                }
+                anuncioCompleto(){
+                    return this.anuncio() + ": el modelo " + this.modelo;
+                }
+
+            }//class modelo
+            let miCoche = new Modelo("Toyota", "Yaris");
+            mensaje.innerHTML = miCoche.anuncioCompleto();
+
+            /*get marca(){
+                return this._marca;
+            }*/
+        })
+    </script>
+    
+</body>
+</html>
