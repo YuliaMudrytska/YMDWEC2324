@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema empleados</title>
+</head>
+<body>
+    <script>
+        window.addEventListener("load", function(){
+            //primero creamos las clases que se nos pide con sus debidad propiedades
+            class Empleado {
+                constructor(nombre, salario) {
+                    this.nombre = nombre;
+                    this.salario = salario;
+                }
+
+                //hacemos la función de  salario
+                calcularSueldo() {
+                    return this.salario;
+                }
+            }
+
+            class EmpleadoPorHora extends Empleado {
+                constructor(nombre, salarioBase, horasTrabajadas, tarifaPorHora) {
+                    super(nombre, salarioBase);
+                    this.horasTrabajadas = horasTrabajadas;
+                    this.tarifaPorHora = tarifaPorHora;
+                } 
+
+                //hacemos la función de calcular sueldo
+                calcularSueldo() {
+                    return this.horasTrabajadas * this.tarifaPorHora;
+                }
+            }
+
+            class EmpleadoAsalariado extends Empleado {
+                constructor(nombre, salarioBase, bonoAnual) {
+                    super(nombre, salarioBase);
+                    this.bonoAnual = bonoAnual;
+                }
+
+                calcularSueldo() {
+                    return super.calcularSueldo() + this.bonoAnual;
+                }
+            }               
+
+// Hacemos un ejemlo para ver si funciona, introduciendo las cantidades correspondientes 
+//en el empleado por horas tenemos que introducir el salarioBase las horas trabajadas
+//y la tarifa por horas 
+const alex = new EmpleadoPorHora("Alex", 1500, 40, 10);
+const laura = new EmpleadoAsalariado("Laura", 3000, 1000);
+
+console.log("Alex cobra:", alex.calcularSueldo() + "€");
+console.log("Laura cobra:", laura.calcularSueldo() + "€");
+        })
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta >
+        <title>Ejemplos de formulario</title>
+    </head>
+    <body>
+
+        <p>La maquina está arranada</p>
+        <form>
+            <input type="button" value="Apagar" ><!--id=pulsar-->
+        </form>
+        <script>
+            /*
+            desable = true -> isirve para desabilitar un botón 
+
+            function(e) {
+                eventpreventDefault() -envia el envio predeterminado del formulario
+            }
+
+            desabilitar el botón despues de la primera pulsación :
+            input type =button value = enviar onclick = "this.disabled=true.value=Enviando..";this.form.submit();
+ <          */
+            window.addEventListener('load', function(){
+
+                const button = document.querySelector("input");
+                const parrafo = document.querySelector('p');
+
+                button.addEventListener("click", updateButton);
+
+                function updateButton(){
+                    if(button.value === 'Encendida'){
+                        button.value = 'Apagar'
+                        parrafo.textContent = "La maquina esta detenida";
+                    }else {
+                        button.value = "Arrancar maquina";
+                        parrafo.textContent = ""
+                    }
+                }
+            })
+    
+            /*document.getElementById("formu").addEventListener("button", function(event){
+            event.preventDefault();
+
+            let texto = document.getElementById("parrafo");
+            let boton = docume.getElementById("pulsar");
+
+            if(boton.value == 'Apagar'){
+                texto.textContent = 'Apagada';
+                boton.value= 'Encender';
+            }else{
+                texto.textContent = 'Encendida';
+                boton.value = 'Apagar'
+            }//else
+            })//function
+            })*/
+ 
+        </script>
+
+
+    </body>
+</html>

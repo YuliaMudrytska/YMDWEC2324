@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misiles lanzados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Sistema de Defensa - Lanzamiento de Misiles</h1>
+    <div id="countdown"></div>
+
+    <script>
+        function lanzamiento(missileNumber) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                resolve(`Misil ${missileNumber} ¡lanzado!`);
+                }, missileNumber * 5000);
+            });
+        }
+        async function inicioLanzamiento() {
+            const countdownElement = document.getElementById('countdown');
+            for (let i = 3; i > 0; i--) {
+                countdownElement.innerText = `¡Preparándose para el lanzamiento en ${i}!`;
+                await new Promise(resolve => setTimeout(resolve, 1000));
+        
+            }//for
+        
+
+            countdownElement.innerText =  ""
+
+            for (let i = 1; i <= 15; i++) {
+                const result = await lanzamiento(i);
+                countdownElement.innerText = result;
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+        }//inicioLanzamiento
+
+        inicioLanzamiento();
+    </script>
+</body>
+</html>
