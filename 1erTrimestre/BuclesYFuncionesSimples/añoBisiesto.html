@@ -9,10 +9,10 @@
             var anyo = prompt("Dame tu año");
             function esBisiesto(anyo){
               if ((anyo % 4 == 0) && (anyo % 100 != 0)||(anyo.endsWith("00"))&&(anyo % 400 == 0)) {
-                return 1;
+                return "Es bisiesto";
               }
               else{
-                return 0;
+                return "no es bisiesto";
               }
             }
            alert(esBisiesto(anyo));
