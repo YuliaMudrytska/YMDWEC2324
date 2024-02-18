@@ -1,0 +1,38 @@
+.casilla {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(61, 169, 113);
+}
+
+.pagina-inicial {
+    text-align: center;
+}
+
+.configuracion {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.tablero {
+    margin-top: 50px; /* Ajusta el margen superior para dejar espacio para el menú desplegable */
+}
