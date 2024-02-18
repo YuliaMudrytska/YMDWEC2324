@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta>
+        <title>Fechas</title>
+    </head>
+    <body>
+        <script>
+          /*let fechaMili = new Date(86400000);
+
+          var fechaLargo = new Date(2015,11,10,14,30,25);
+          var fechaCorto = new Date(2015,11,10);
+          alert("Fecha largo: " + fechaLargo + "Fecha corta: " + fechaCorto);
+
+          var fecha = new Date();
+          alert("Fecha: " + fecha);
+          alert("toString: " + fecha.toDateString());
+          alert("toUTCString: " + fecha.toUTCString());
+          alert("toDateString: " + fecha.toDateString());*/
+
+          //obten los dias que han pasado entre hoy y una fecha fija
+          //7 de mayo de 1950
+          let fecha= new Date();
+          let fechaFija = new Date(1990,5,7);
+          
+          alert("Fecha actual: " + fecha.getTime() + "\nFecha fija: " + fechaFija.getTime());
+          var diferencia = fecha.getTime() - fechaFija.getTime();
+
+          let aniyos = (diferencia /1000/60/60/24/30/12);
+
+          let meses =  (aniyos % 1)* 12;
+
+          let dias = (meses % 1) * 30;
+
+          let horas = (dias % 1) * 24;
+
+          let minutos = (horas % 1) * 60;
+
+          let segundos = (minutos % 1) * 60;
+
+          const tiempo =[[
+            Math.floor(aniyos),
+            Math.floor(meses),
+            Math.floor(dias)],
+
+           [Math.floor(horas),
+            Math.floor(minutos),
+            Math.floor(segundos)
+          ]];
+          
+          alert();
+
+        </script>
+    </body>
+    
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Clase del 22/11</title>
+</head>
+<body>
+    <p id="tiempo"></p>
+<script>
+    var int = setInterval(segundos,1000);
+    function segundos(){
+        var fecha = new Date();
+        document.getElementById("tiempo").innerHTML= fecha.getSeconds();
+    }
+    
+</script>
+<button onclick="segundos()">Empezar</button>
+<button onclick="clearTimeout(int)">parar</button>
+
+
+
+</body>
+</html>

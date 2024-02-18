@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Objetos nativos: Number</title>
+    </head>
+    <body>
+        <script>
+            /*
+            En JS existe un unico tipo de datos numerico. no hay dif entre entero, 
+            decimal o de not cientif(123.23e-4).
+            Indice de cract partic
+            1º Cambios de base
+            2º Number /NaN
+            3º Nueros como objetos
+            4º propiedades
+            */
+
+            //1º
+         /*   var inf =2 ;
+             while(inf!= Infinity){
+                alert(inf);
+                inf = inf*inf;
+             }*///multiplica hasta que el número es demaciado grande 
+             //y ya no lo puede escribir así que se convierte en  Infitity
+
+          /*   var div1 = 2, div2 = 0;
+             alert("Divición 2/0=" +2/0);
+             alert("Divición -2/0=" +(-2/0));
+             alert("Typeof: " +(div1/div2));*/
+
+             //2º
+             let vari1 = 100/"casa";
+             let vari2 = 100/"10";
+             alert("La operación 100/casa de como resultado: " + vari1);
+             alert("La operación 100/10 de como resultado: " + vari2);
+
+             alert("Es NaN la vari1? " + "\n" +isNaN(vari1));
+             alert("De que tipo es NaN ? " + typeof(vari2));
+
+             //3º
+             var num = 123;
+             var num2 = new Number(123);
+             var num3 = new Number(123);
+             alert("num es un : " + typeof(num));//number
+             alert("num2 es un : " +typeof(num2)); //object
+
+             alert("num == num2 da: " + (num == num2));
+             alert("num == num2 da: " + (num == num2));
+             alert("num2 == num3 da: " + (num2 == num3));
+
+             var maximo = Number.MAX_VALUE;
+             alert("Max= " + maximo);
+
+             var min = Number.MIN_VALUE;
+             alert("Min= " + min);
+
+             var neg = Number.NEGATIVE_INFINITY;
+             alert("" + neg);
+
+             /*
+             toFixet / toPrecision / toExpotential / valueOf / toString / toLocaleString 
+
+             1 - (<num decimal>) cadena con el num especif de decimales indicados.
+             2- (<num cifras>) cadena con el num especif de cifras (parte entera mas decimal indicado).
+                3- cadena con el num redondeado a notacion cientifica
+                4- devuelve el valor primitivo
+                6- devuelve 
+             Number() / parseInt / parseFloat
+             1. devuelve valor numerico
+             2. 
+             3. 
+             
+             isNan (valor) : dicesi es un num(false) o no (true)
+             isFinite : devuelve true si el valor es finito
+             parseInt : convierte el valor pasado a numero entero
+             parseFloat : 
+
+             *Math : objeto nativo que permite realizar operaciones matematicas.
+
+             Metodos: 
+             random() -> num aleatorio
+             max(<lista valores>) -> val maximo
+             min (<lista valores>)
+             round (<num>)
+             celi (<num>) -> redondea al azar
+             floor (<num) -> siempre a la baja (como si truncara)
+             
+             Encadenamiento
+             pow / sqrt / abs / 
+
+             */
+
+
+
+
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Primera practica</title>
+<!--<script src="clase2002.js"></script>-->
+ <!--Nos llevamos el codigo de java a otra pagina-->
+
+</head>
+
+<body>
+        <p id="parrafo1"></p>
+        <p id="parrafo2"></p>
+        <p id="parrafo3"></p>
+     <script>
+        
+        var nombre;
+        document.getElementById("parrafo1").innerHTML=nombre;
+
+        nombre = "Belen";
+
+        document.getElementById("parrafo2").innerHTML=nombre;
+
+        var nacimiento = 1990;
+
+        document.getElementById("parrafo3").innerHTML = nacimiento;
+
+        var nombreApellido = 'Javier'+ '' + 'Grarcia';
+        var fallecimiento = nacimiento + 37;
+
+        alert(typeof nacimiento);
+        alert(typeof nombre);
+
+        let lista =[1,2,3,4];
+        let animales = ["perro","gato", "pato"];
+
+        alert(animales instanceof Object);
+     </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+ <title>Estructuras de control</title>
+</head>
+<body>
+    
+<script>
+   /* var edad = prompt("Dame tu edad");
+
+    switch(true){
+        case edad < 18 : console.log("Eres menor");
+        case edad>=18 :console.log("Eres mayor de edad");*/
+//}
+ //el while y el for solo en un caso pueden ser iguales y es si omitimos el incremento en el for
+   let numIntentos = Number(prompt("Adivina mi número"));
+   
+   let intentos = 1;
+   let numeroAleatorio = Math.ceil(Math.random()*100);
+   while(numIntentos!==numeroAleatorio){
+    if(numIntentos>numeroAleatorio){
+        numIntentos=Number(prompt("No es este numero, mi numero es menor, prueba de nuevo"));
+    }
+    else{
+        numIntentos=Number(prompt ("No es este nuero, mi numero es mayor,prueba de nuevo"));
+    }
+    intentos ++;
+    
+   }
+   alert("Felicidades has acertado, numero de intentos: " +  intentos);
+ 
+ 
+
+
+</script>
+</body>
+</html>
